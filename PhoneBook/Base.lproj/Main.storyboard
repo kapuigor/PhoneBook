@@ -17,13 +17,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="AxY-Ck-Bnf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="AxY-Ck-Bnf" customClass="CustomTableViewCell" customModule="PhoneBook" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AxY-Ck-Bnf" id="tZv-TR-FsJ">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Bb-RZ-XgM">
+                                            <rect key="frame" x="20" y="10" width="49" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="49" id="Jf4-1p-npl"/>
+                                                <constraint firstAttribute="height" constant="24" id="hAO-pc-akh"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Second Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehV-7d-C1v">
+                                            <rect key="frame" x="73" y="10" width="121" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="9aB-SR-n5R"/>
+                                                <constraint firstAttribute="width" constant="121" id="YLs-DR-ZgK"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="4Bb-RZ-XgM" firstAttribute="centerY" secondItem="tZv-TR-FsJ" secondAttribute="centerY" id="0Hz-fA-DeG"/>
+                                        <constraint firstAttribute="trailing" secondItem="ehV-7d-C1v" secondAttribute="trailing" constant="220" id="16C-Kg-g0l"/>
+                                        <constraint firstItem="ehV-7d-C1v" firstAttribute="leading" secondItem="4Bb-RZ-XgM" secondAttribute="trailing" constant="4" id="8Gf-Ag-8Hq"/>
+                                        <constraint firstItem="ehV-7d-C1v" firstAttribute="centerY" secondItem="tZv-TR-FsJ" secondAttribute="centerY" id="JMh-jq-Mhz"/>
+                                        <constraint firstItem="4Bb-RZ-XgM" firstAttribute="leading" secondItem="tZv-TR-FsJ" secondAttribute="leading" constant="20" symbolic="YES" id="vgm-iF-3eT"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="4Bb-RZ-XgM" id="GlO-GR-WWi"/>
+                                    <outlet property="secondNameLabel" destination="ehV-7d-C1v" id="ONI-fH-vv4"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

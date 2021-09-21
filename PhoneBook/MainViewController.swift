@@ -10,8 +10,8 @@ import UIKit
 class MainViewController: UITableViewController {
     
     let contacts = [
-        "Ivan" , "Alexey", "Fedor",
-        "Stepan", "Tatyana", "Nikolay"
+        "Ivan Ivanov" , "Alexey Petrov", "Fedor Chistyakov",
+        "Stepan Chernov", "Tatyana ", "Nikolay"
     ]
 
     override func viewDidLoad() {
@@ -29,12 +29,12 @@ class MainViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
 
-        cell.textLabel?.text = contacts[indexPath.row]
-        cell.imageView?.image = UIImage(named: contacts[indexPath.row])
-        cell.imageView?.layer.cornerRadius = cell.frame.size.height / 2
-        cell.imageView?.clipsToBounds = true
+        cell.nameLabel?.text = contacts[indexPath.row]
+//        cell.imageView?.image = UIImage(named: contacts[indexPath.row])
+//        cell.imageView?.layer.cornerRadius = cell.frame.size.height / 2
+//        cell.imageView?.clipsToBounds = true
         
         return cell
     }
