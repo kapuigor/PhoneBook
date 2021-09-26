@@ -14,4 +14,5 @@ Phone book app
 
 Класс CustomTableViewCell (файл CustomTableViewCell), реализующий ячейку контакта в классе MainViewController.
 
-https://user-images.githubusercontent.com/22479739/134815289-265d0026-178c-4d74-89a0-b27c566d4e91.mp4
+https://user-images.githubusercontent.com/22479739/134815947-1cfed43f-b838-40a6-b897-1fcfc58384a3.mp4
+
